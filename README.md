@@ -43,7 +43,7 @@ docker-compose run --rm app sh -c "flake8"
 docker-compose run --rm app sh -c "django-admin startproject app ."
 ```
 
-#### Lanzar proyecto
+#### Lanzar proyecto o despues de edigar docker-compose.yml
 ```shell
 docker-compose up
 ```
@@ -56,4 +56,16 @@ docker-compose run --rm app sh -c "python manage.py migrate"
 
 ```shell
 docker-compose run --rm app sh -c "python manage.py createsuperuser"
+```
+
+-- Ejecutar test:
+
+```shell
+docker-compose run --rm app sh -c "python manage.py test"
+```
+
+-- Crear app:
+
+```shell
+docker-compose run --rm app sh -c "python manage.py startapp core"
 ```
